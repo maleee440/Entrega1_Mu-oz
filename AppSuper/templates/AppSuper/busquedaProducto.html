@@ -1,0 +1,18 @@
+{% extends "AppSuper/padre.html" %}
+{% block titulo %}
+
+<h1>En esta seccion vamos a buscar los productos </h1>
+                                
+{% endblock %}  
+
+{% block descripcion %}
+
+    <form action="/AppSuper/buscar2/" method="GET" > 
+
+        <input type="number" name="camada" id="camada">
+
+        <input type="submit" value="Buscar">
+
+
+    </form>
+{% endblock %}

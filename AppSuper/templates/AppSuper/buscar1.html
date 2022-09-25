@@ -1,0 +1,19 @@
+{% extends "AppSuper/padre.html" %}
+{% block titulo %}
+
+<h1>En esta seccion vamos a buscar a los cajeros por su camada </h1>
+                                
+{% endblock %} 
+{% block descripcion %}
+    <p> Estamos buscando a: {{busqueda1}}</p>
+
+    {% for cajero in cajeros %}
+
+        <p>Cajero: {{cajero.nombre}}</p>
+        <p>Apellido: {{cajero.apellido}}</p>
+        <p>Camada: {{cajero.camada}}</p>
+
+    {% endfor%}
+
+
+{% endblock %}

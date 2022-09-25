@@ -1,0 +1,37 @@
+{% extends "AppSuper/padre.html" %}
+
+
+
+{% load static %}
+
+
+
+{% block titulo %}
+
+<h1>Bienvenidos</h1>
+                                
+{% endblock %}  
+
+{% block descripcion %}
+
+<form action="/AppSuper/buscar/" method="GET" > 
+
+    <input type="number" name="camada" id="camada">
+
+    <input type="submit" value="Buscar">
+
+
+</form>
+
+    <p> Estas buscando a :{{busqueda}}</p>
+
+    {% for cliente in clientes %}
+
+        <p>Cliente: {{cliente.nombre}}</p>
+        <p>Camada: {{cliente.camada}}</p>
+        
+    {% endfor%}
+
+
+
+{% endblock %}

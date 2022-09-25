@@ -1,0 +1,19 @@
+{% extends "AppSuper/padre.html" %}
+{% block titulo %}
+
+<h1>En esta seccion vamos a buscar a los productos </h1>
+                                
+{% endblock %} 
+{% block descripcion %}
+    <p> La camada de su producto es : {{busqueda2}}</p>
+
+    {% for producto in productos %}
+
+        <p>Producto: {{producto.nombre}}</p>
+        <p>Precio: {{producto.precio}}</p>
+        <p>Camada: {{producto.camada}}</p>
+
+    {% endfor%}
+
+
+{% endblock %}
